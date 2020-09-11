@@ -28,7 +28,7 @@ class checkAudioTool extends userInterviewService
                 {
                     foreach ($row as $i => $userInterviewId)
                     {
-                        $path = "../VSII/AudioData/user_interviews/$userInterviewId/answers/";
+                        $path = "C:/Users/duylv/Desktop/AudioData/user_interviews/$userInterviewId/answers/";
 
                         if (!file_exists($path))
                         {
@@ -73,7 +73,7 @@ class checkAudioTool extends userInterviewService
                 }
             }
         }
-        $file = fopen('../VSII/audioLog/durationTimeGreater.csv', 'w');
+        $file = fopen('../VSII/audioLog/durationTimeGreater1.csv', 'w');
         foreach ($contents as $content)
         {
             fputcsv($file, $content);
@@ -83,7 +83,7 @@ class checkAudioTool extends userInterviewService
 
     private function getUserInterviewIds()
     {
-        return array_slice(scandir("../VSII/AudioData/user_interviews/"), 2);
+        return array_slice(scandir("C:/Users/duylv/Desktop/AudioData/user_interviews/"), 2);
     }
 
     private function convertUserData($userDatas)
